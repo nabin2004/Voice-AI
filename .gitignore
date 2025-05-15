@@ -1,0 +1,4 @@
+data/
+model/
+nepali_GPT2/
+nepali_words_trie.pkl
