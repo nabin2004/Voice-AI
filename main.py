@@ -11,16 +11,22 @@ from fastapi.middleware.cors import CORSMiddleware
 import nemo.collections.asr as nemo_asr
 from tempfile import NamedTemporaryFile
 from pydub import AudioSegment
+from config import settings
 
 # ------------------ Logging ------------------ #
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger()
 
 # ------------------ Paths ------------------ #
-PROJECT_ROOT = Path(__file__).resolve().parent
-TRIE_PICKLE_PATH = PROJECT_ROOT / "nepali_trie.pkl"
-ASR_MODEL_PATH = PROJECT_ROOT / "ASRmodel" / "indicconformer_stt_ne_hybrid_rnnt_large.nemo"
-GPT2_MODEL_PATH = PROJECT_ROOT / "GPT2"
+# PROJECT_ROOT = Path(__file__).resolve().parent
+# TRIE_PICKLE_PATH = PROJECT_ROOT / "nepali_trie.pkl"
+# ASR_MODEL_PATH = PROJECT_ROOT / "ASRmodel" / "indicconformer_stt_ne_hybrid_rnnt_large.nemo"
+# GPT2_MODEL_PATH = PROJECT_ROOT / "GPT2"
+
+ASR_MODEL_PATH = settings.asr_model_path
+GPT2_MODEL_PATH = settings.gpt2_model_path
+TRIE_PICKLE_PATH = settings.trie_pickle_path
+
 
 # ------------------ Trie ------------------ #
 class TrieNode:
