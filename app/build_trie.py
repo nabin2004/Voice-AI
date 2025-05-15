@@ -120,7 +120,7 @@ def add_words_to_trie(new_words, filename="nepali_words_trie.pkl", save_and_visu
     if trie is None:
         print("Could not load trie. Creating a new one.")
         trie = Trie()
-    
+
     added_count = 0
     for word in new_words:
         word = word.strip()
@@ -128,7 +128,7 @@ def add_words_to_trie(new_words, filename="nepali_words_trie.pkl", save_and_visu
             if not trie.is_word_spelled_correctly(word):
                 trie.insert(word)
                 added_count += 1
-    
+
     if save_and_visualize:
         if save_trie(trie, filename):
             try:
@@ -153,7 +153,7 @@ def add_words_from_file(file_path, filename="nepali_words_trie.pkl"):
 
 if __name__ == "__main__":
     vocab_file = "./data/vocab.txt"
-    
+
     if os.path.exists(vocab_file):
         trie = build_trie_from_file(vocab_file)
         if trie is not None:
@@ -170,7 +170,7 @@ if __name__ == "__main__":
     # Test the loaded trie
     loaded_trie = load_trie("nepali_words_trie.pkl")
     if loaded_trie is None:
-        loaded_trie = Trie()  
+        loaded_trie = Trie()
 
     test_word = "काठमाडौं"
     if loaded_trie.is_word_spelled_correctly(test_word):

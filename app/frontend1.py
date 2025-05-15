@@ -24,7 +24,7 @@ def transcribe_audio(audio):
 with gr.Blocks(title="Nepali Speech to Text") as demo:
     gr.Markdown("## 🎙️ Nepali Speech-to-Text Interface")
 
-    with gr.Row(): 
+    with gr.Row():
         with gr.Column(scale=1):
             gr.Markdown("### Record Audio")
             record_audio = gr.Audio(type="filepath", sources=["microphone"], label="Record Audio")
