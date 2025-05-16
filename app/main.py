@@ -18,14 +18,14 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger()
 
 # ------------------ Paths ------------------ #
-# PROJECT_ROOT = Path(__file__).resolve().parent
-# TRIE_PICKLE_PATH = PROJECT_ROOT / "nepali_trie.pkl"
-# ASR_MODEL_PATH = PROJECT_ROOT / "ASRmodel" / "indicconformer_stt_ne_hybrid_rnnt_large.nemo"
-# GPT2_MODEL_PATH = PROJECT_ROOT / "GPT2"
+PROJECT_ROOT = Path(__file__).resolve().parent
+TRIE_PICKLE_PATH = PROJECT_ROOT / "../model/nepali_words_trie.pkl"
+ASR_MODEL_PATH = PROJECT_ROOT / "../model" / "indicconformer_stt_ne_hybrid_rnnt_large.nemo"
+GPT2_MODEL_PATH = PROJECT_ROOT  / "../model/nepali_GPT2"
 
-ASR_MODEL_PATH = settings.asr_model_path
-GPT2_MODEL_PATH = settings.gpt2_model_path
-TRIE_PICKLE_PATH = settings.trie_pickle_path
+# ASR_MODEL_PATH = settings.asr_model_path
+# GPT2_MODEL_PATH = settings.gpt2_model_path
+# TRIE_PICKLE_PATH = settings.trie_pickle_path
 
 
 # ------------------ Trie ------------------ #
@@ -108,8 +108,8 @@ asr_model.cur_decoder = "ctc"
 logger.info("ASR model loaded.")
 
 logger.info("Loading GPT-2 model...")
-tokenizer = GPT2Tokenizer.from_pretrained(str(GPT2_MODEL_PATH))
-gpt2_model = GPT2LMHeadModel.from_pretrained(str(GPT2_MODEL_PATH))
+tokenizer = GPT2Tokenizer.from_pretrained("nabin2004/nepali_GPT2")
+gpt2_model = GPT2LMHeadModel.from_pretrained("nabin2004/nepali_GPT2")
 gpt2_model.eval()
 gpt2_model.to('cuda' if torch.cuda.is_available() else 'cpu')
 logger.info("GPT-2 loaded.")
