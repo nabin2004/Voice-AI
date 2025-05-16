@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>Voice AI</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/fontawesome.min.css" rel="stylesheet">
+        <link href="css/brands.min.css" rel="stylesheet">
+        <link href="css/solid.min.css" rel="stylesheet">
+        <link href="css/v4-font-face.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">Voice AI</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="." class="nav-link active" aria-current="page">Welcome to Voice AI</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Docs</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="docs/" class="dropdown-item">Welcome to Voice AI</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="docs/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#welcome-to-voice-ai" class="nav-link">Welcome to Voice AI</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#nepali-voice-ai-api-documentation" class="nav-link">📘 Nepali Voice AI API – Documentation</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#main-components" class="nav-link">📦 Main Components</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#api-endpoints" class="nav-link">🚀 API Endpoints</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#how-spell-correction-works" class="nav-link">🧠 How Spell Correction Works</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="welcome-to-voice-ai">Welcome to Voice AI</h1>
+<!-- For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+
+## Commands
+
+* `mkdocs new [dir-name]` - Create a new project.
+* `mkdocs serve` - Start the live-reloading docs server.
+* `mkdocs build` - Build the documentation site.
+* `mkdocs -h` - Print help message and exit.
+
+## Project layout
+
+    mkdocs.yml    # The configuration file.
+    docs/
+        index.md  # The documentation homepage.
+        ...       # Other markdown pages, images and other files. -->
+
+<p>Here’s a concise and structured <strong>documentation</strong> for your FastAPI-based Nepali speech correction service:</p>
+<hr />
+<h1 id="nepali-voice-ai-api-documentation">📘 Nepali Voice AI API – Documentation</h1>
+<p>This application provides a FastAPI-based interface for <strong>Nepali speech-to-text transcription</strong> and <strong>GPT-2 powered spell correction</strong>. It integrates an ASR model, a GPT-2 model, and a Trie-based spell checker.</p>
+<hr />
+<h2 id="main-components">📦 Main Components</h2>
+<h3 id="1-asr-automatic-speech-recognition">1. <strong>ASR (Automatic Speech Recognition)</strong></h3>
+<ul>
+<li>Uses a pretrained <a href="https://github.com/NVIDIA/NeMo">NeMo</a> ASR model for Nepali (<code>.nemo</code> file).</li>
+<li>Transcribes <code>.wav</code> audio to text.</li>
+</ul>
+<h3 id="2-trie-spell-checker">2. <strong>Trie Spell Checker</strong></h3>
+<ul>
+<li>
+<p>A pickled custom Trie data structure is used to:</p>
+</li>
+<li>
+<p>Check if a word is spelled correctly.</p>
+</li>
+<li>Suggest likely completions for a prefix.</li>
+</ul>
+<h3 id="3-gpt-2-language-model">3. <strong>GPT-2 Language Model</strong></h3>
+<ul>
+<li>A fine-tuned Nepali GPT-2 model is used to rank suggestions based on sentence context.</li>
+<li>Helps pick the most plausible word from the suggestions.</li>
+</ul>
+<hr />
+<h2 id="api-endpoints">🚀 API Endpoints</h2>
+<h3 id="post-transcribe"><code>POST /transcribe/</code></h3>
+<p><strong>Transcribe Nepali audio and auto-correct spelling.</strong></p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><code>file</code>: <code>.wav</code> audio file (can be stereo; internally converted to mono)</li>
+</ul>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">{
+  &quot;transcription&quot;: &quot;corrected sentence&quot;
+}
+</code></pre>
+<hr />
+<h3 id="post-spellcheck"><code>POST /spellcheck/</code></h3>
+<p><strong>Check if a list of words are spelled correctly.</strong></p>
+<p><strong>Request:</strong></p>
+<pre><code class="language-json">{
+  &quot;words&quot;: [&quot;नेपाल&quot;, &quot;वाइज्याकमा&quot;]
+}
+</code></pre>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">{
+  &quot;results&quot;: {
+    &quot;नेपाल&quot;: true,
+    &quot;वाइज्याकमा&quot;: true
+  }
+}
+</code></pre>
+<hr />
+<h3 id="post-suggest"><code>POST /suggest/</code></h3>
+<p><strong>Suggest words based on prefix using Trie.</strong></p>
+<p><strong>Request:</strong></p>
+<pre><code class="language-json">{
+  &quot;word&quot;: &quot;का&quot;,
+  &quot;max_suggestions&quot;: 5
+}
+</code></pre>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">{
+  &quot;suggestions&quot;: [&quot;काठमाडौँ&quot;, &quot;कार्यालय&quot;, &quot;कारण&quot;, ...]
+}
+</code></pre>
+<hr />
+<h3 id="post-correct"><code>POST /correct/</code></h3>
+<p><strong>Correct a manually entered Nepali sentence using GPT-2 ranking.</strong></p>
+<p><strong>Request:</strong></p>
+<pre><code class="language-json">{
+  &quot;sentence&quot;: &quot;काठमाण्डौ एक ठुलो शहर हो&quot;
+}
+</code></pre>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">{
+  &quot;corrected&quot;: &quot;काठमाडौँ एक ठुलो शहर हो&quot;
+}
+</code></pre>
+<hr />
+<h2 id="how-spell-correction-works">🧠 How Spell Correction Works</h2>
+<ol>
+<li>Each token is checked in the Trie.</li>
+<li>
+<p>If misspelled:</p>
+</li>
+<li>
+<p>Top suggestions are generated based on prefix.</p>
+</li>
+<li>GPT-2 ranks each suggestion in context.</li>
+<li>The highest-scoring suggestion replaces the word.</li>
+</ol>
+<hr /></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js"></script>
+        <script src="search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2025-05-16 14:44:40.901529+00:00
+-->
