@@ -3,10 +3,10 @@ name: Deploy MkDocs Documentation
 on:
   push:
     branches:
-      - main  # change if using a different default branch
+      - master
 
 permissions:
-  contents: write  # REQUIRED for pushing to gh-pages
+  contents: write  
 
 jobs:
   deploy:
