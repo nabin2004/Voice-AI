@@ -5,7 +5,7 @@ def load_corpus(path):
         return f.read()
 
 def extract_unique_vocab(text):
-    words = text.split() 
+    words = text.split()
     # unique_words = sorted(set(words))
     unique_words = set(words)
     return unique_words
